@@ -9,7 +9,7 @@ const USER_INFO_API = axios.create({
   timeout: 600
 });
 
-export const fetchUserInfo = (projectId) => {
+export const fetchUserInfo = () => {
   return USER_INFO_API
     .get(USER_INFO_ENDPOINT)
     .then((response) => {
