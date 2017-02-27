@@ -3,6 +3,7 @@ export function fetchUserRequest(state) {
 }
 
 export function fetchUserSuccess(state, action) {
+
   if (!action.payload) {
     return state;
   }
@@ -12,4 +13,13 @@ export function fetchUserSuccess(state, action) {
 
 export function fetchUserFailure(state) {
   return { ...state, isUserLoading: false };
+}
+
+export function fetchWeatherSuccess(state, action) {
+
+  if (!action.payload) {
+    return state;
+  }
+  const weather = action.payload.query.results;
+  return { ...state, isUserLoading: false, weather };
 }

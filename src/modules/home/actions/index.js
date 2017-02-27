@@ -23,3 +23,18 @@ export function fetchUser() {
       });
   };
 }
+
+export function fetchWeather(user) {
+  return (dispatch) => {
+    dispatch(action(types.FETCH_WEATHER_REQUEST));
+
+    WeatherAPI
+      .fetchWeather(user)
+      .then((wather) => {
+        dispatch(action(types.FETCH_WEATHER_SUCCESS, wather));
+      })
+      .catch((error) => {
+        action(types.FETCH_WEATHER_FAILURE, error);
+      });
+  };
+}
