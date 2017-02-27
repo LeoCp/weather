@@ -1,4 +1,4 @@
-<div style="text-align:center"><img src ="Logo.png" /></div>
+<p align="center"><img src="Logo.png" /></p>
 # Weather
 This is a simple app built with react and redux.  
 
